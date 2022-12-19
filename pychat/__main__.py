@@ -15,7 +15,9 @@ def main():
 
     query = input("Input: ")
 
-    if query != "":
+    test_input = query.strip()
+
+    if test_input != "":
 
         completion = openai.Completion.create(
             engine="text-davinci-003", prompt=query, max_tokens=4000
